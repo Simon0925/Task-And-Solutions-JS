@@ -1,0 +1,39 @@
+// Task: Vowel Counter
+// Description:
+// Write a function called countVowels that takes in a string as input and returns the count of vowels (i.e., 'a', 'e', 'i', 'o', 'u') in the string. Treat both uppercase and lowercase vowels as the same.
+
+// Examples:
+
+// countVowels('hello') should return 2 (since 'e' and 'o' are vowels).
+// countVowels('JavaScript is awesome') should return 6 (since 'a', 'a', 'i', 'a', 'e', and 'o' are vowels).
+// countVowels('why?') should return 0 (since there are no vowels in the string).
+// Constraints:
+
+// The input string may contain alphabetic characters (both uppercase and lowercase), numeric digits, punctuation marks, and whitespace characters.
+// Treat both uppercase and lowercase versions of the same vowel as the same character.
+// Ignore non-alphabetic characters when counting vowels.
+// Task:
+// Implement the countVowels function in JavaScript.
+
+
+function countVowels(str){
+    let originalString = str.toLowerCase().split('');
+
+    const vowel = ['a','e','i','o','u'] 
+
+    let res = []
+
+    originalString.forEach(element => {
+
+        if(vowel.includes(element)) res.push(element)
+
+    });
+
+
+    return res.length
+}
+
+
+console.log(countVowels('hello'))
+console.log(countVowels('JavaScript is awesome'))
+console.log(countVowels('why?'))
